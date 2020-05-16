@@ -19,7 +19,7 @@ data_choropleth = dict(type='choropleth',
                        z=np.log(df_emission_0['CO2_emissions']),
                        text=df_emission_0['country_name'],
                        colorscale='inferno',
-                       colorbar=dict(title='CO2 Emissions log scaled')
+                       colorbar=dict(title='COVID-19')
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
