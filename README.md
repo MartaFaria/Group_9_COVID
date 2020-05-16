@@ -1,2 +1,3 @@
-# Group_9_COVID
-Data Visualization project - COVID19 Worldwide situation
+# Deploying your Dash app online
+
+Enjoy at https://dashexample.herokuapp.com/
