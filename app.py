@@ -31,12 +31,11 @@ data_choropleth = dict(type='choropleth',
                        z=np.log(df_covid_0['total_cases']),
                        text=df_covid_0['location'],
                        colorscale='inferno',
-                       colorbar=dict(title='COVID-19'),
-                       projection="natural earth"
+                       colorbar=dict(title='COVID-19')
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
-                                  projection=dict(type='orthographic'
+                                  projection=dict(type='natural earth'
                                                  ),
                                   #showland=True,   # default = True
                                   landcolor='black',
