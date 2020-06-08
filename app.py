@@ -31,7 +31,7 @@ data_choropleth = dict(type='choropleth',
                        z=np.log(df_covid_0['total_cases']),
                        text=df_covid_0['location'],
                        colorscale='inferno',
-                       colorbar=dict(title='COVID-19')
+                       colorbar=dict(title='Total number of COVID-19 cases')
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
