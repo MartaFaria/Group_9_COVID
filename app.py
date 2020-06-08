@@ -5,8 +5,20 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 
-# Dataset 'Processing'
+# INTERATIVE MAP
+import plotly.express as px
+import numpy as np
+from dash import Dash
+from dash.dependencies import Input, Output
 
+import plotly.plotly as py
+from plotly.grid_objs import Grid, Column
+from plotly.tools import FigureFactory as FF
+import time
+
+
+
+# Dataset import
 df_covid = pd.read_csv('owid-covid-data.csv')
 
 df_covid_0 = df_covid.loc[df_covid['date']=='2020-05-01']
@@ -19,7 +31,8 @@ data_choropleth = dict(type='choropleth',
                        z=np.log(df_covid_0['total_cases']),
                        text=df_covid_0['location'],
                        colorscale='inferno',
-                       colorbar=dict(title='COVID-19')
+                       colorbar=dict(title='COVID-19'),
+                       projection="natural earth"
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
