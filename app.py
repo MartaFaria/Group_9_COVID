@@ -14,10 +14,10 @@ df_covid_0 = df_covid.loc[df_covid['date']=='2020-05-01']
 
 # Building our Graphs (nothing new here)
 data_choropleth = dict(type='choropleth',
-                       locations=df_covid_0['country_name'],  #There are three ways to 'merge' your data with the data pre embedded in the map
+                       locations=df_covid_0['location'],  #There are three ways to 'merge' your data with the data pre embedded in the map
                        locationmode='country names',
                        z=np.log(df_covid_0['total_cases']),
-                       text=df_covid_0['country_name'],
+                       text=df_covid_0['location'],
                        colorscale='inferno',
                        colorbar=dict(title='COVID-19')
                       )
