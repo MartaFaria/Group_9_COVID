@@ -16,7 +16,7 @@ df_covid_0 = df_covid.loc[df_covid['date']=='2020-05-01']
 data_choropleth = dict(type='choropleth',
                        locations=df_covid_0['location'],  #There are three ways to 'merge' your data with the data pre embedded in the map
                        locationmode='country names',
-                       z=df_covid_0['total_cases'],
+                       z=np.log(df_covid_0['total_cases']),
                        text=df_covid_0['location'],
                        colorscale='inferno',
                        colorbar=dict(title='COVID-19')
